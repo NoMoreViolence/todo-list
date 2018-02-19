@@ -15,6 +15,7 @@ class App extends Component {
     ]
   };
 
+  // 인풋 값을 여기서 정함
   handleChange = e => {
     this.setState({
       input: e.target.value // input 의 다음 바뀔 값
@@ -22,6 +23,7 @@ class App extends Component {
   };
 
   handleCreate = () => {
+    // 바인딩
     const { input, todos } = this.state;
     this.setState({
       input: '', // 인풋 비우고
@@ -34,6 +36,7 @@ class App extends Component {
     });
   };
 
+  // 엔터가 눌려졌을 때
   handleKeyPress = e => {
     // 눌려진 키가 Enter 면 handleCreate 호출
     if (e.key === 'Enter') {
@@ -41,6 +44,7 @@ class App extends Component {
     }
   };
 
+  // TODO-LIst 토글
   handleToggle = id => {
     // todos를 바인딩 시킴 this.state에
     const { todos } = this.state;
@@ -63,6 +67,7 @@ class App extends Component {
     });
   };
 
+  // 없애기
   handleRemove = id => {
     const { todos } = this.state;
     this.setState({
