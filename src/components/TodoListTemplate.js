@@ -9,6 +9,14 @@ const TodoListTemplate = ({ form, children }) => {
       <section className="todos-wrapper">{children}</section>
     </main>
   );
+  /* App.js에 있는
+  <TodoItemList
+          todos={todos}
+          onToggle={handleToggle}
+          onRemove={handleRemove}
+        />
+        이 영역이 children 영역
+  */
 };
 
 export default TodoListTemplate;

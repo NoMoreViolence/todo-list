@@ -9,9 +9,9 @@ class App extends Component {
   state = {
     input: '',
     todos: [
-      { id: 0, text: ' 리액트 소개', checked: false },
-      { id: 1, text: ' 리액트 소개', checked: true },
-      { id: 2, text: ' 리액트 소개', checked: false }
+      { id: 0, text: ' 리액트 공부', checked: false },
+      { id: 1, text: ' TODO - LIST', checked: true },
+      { id: 2, text: ' Props & State', checked: false }
     ]
   };
 
@@ -42,6 +42,7 @@ class App extends Component {
   };
 
   handleToggle = id => {
+    // todos를 바인딩 시킴 this.state에
     const { todos } = this.state;
 
     // 파라미터로 받은 id 를 가지고 몇번째 아이템인지 찾습니다.
@@ -56,6 +57,7 @@ class App extends Component {
       checked: !selected.checked
     };
 
+    // state를 업데이트
     this.setState({
       todos: nextTodos
     });
@@ -69,7 +71,9 @@ class App extends Component {
   };
 
   render() {
+    // 위에서 선언한 state 바인딩
     const { input, todos } = this.state;
+    // 위에서 선언한 함수들 갖다 쓰려고 this 바인딩
     const {
       handleChange,
       handleCreate,
@@ -79,6 +83,7 @@ class App extends Component {
     } = this;
 
     return (
+      // APP.js 최상층 랜더에서 TODO-List 형식 갖추어 랜더링함
       <TodoListTemplate
         form={
           <Form

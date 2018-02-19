@@ -1,6 +1,7 @@
 import React from 'react';
 import './Form.css';
 
+// form의 props : value onChange, onCreate, onKeyPress
 const Form = ({ value, onChange, onCreate, onKeyPress }) => {
   return (
     <div className="form">
