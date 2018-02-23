@@ -8,17 +8,18 @@
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "jsx": true,
-      "modules": true
+      "jsx": true
     },
     "sourceType": "module"
   },
   "plugins": ["react"],
   "rules": {
     "no-console": 0,
+    "no-constant-condition": 0,
+    "no-unused-vars": 0,
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "no-unused-vars": 0
+    "no-undef": 0
   }
 }

@@ -6,14 +6,18 @@ import TodoItemList from './components/TodoItemList';
 class App extends Component {
   id = 3; // 이미 0,1,2 가 존재하므로 3으로 설정
 
-  state = {
-    input: '',
-    todos: [
-      { id: 0, text: ' 리액트 공부', checked: false },
-      { id: 1, text: ' TODO - LIST', checked: true },
-      { id: 2, text: ' Props & State', checked: false }
-    ]
-  };
+  constructor(...args) {
+    super(args);
+
+    this.state = {
+      input: '',
+      todos: [
+        { id: 0, text: ' 리액트 공부', checked: false },
+        { id: 1, text: ' TODO - LIST', checked: true },
+        { id: 2, text: ' Props & State', checked: false }
+      ]
+    };
+  }
 
   // 인풋 값을 여기서 정함
   handleChange = e => {
